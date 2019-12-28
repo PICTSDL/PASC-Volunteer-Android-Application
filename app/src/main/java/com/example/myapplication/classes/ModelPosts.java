@@ -2,7 +2,6 @@ package com.example.myapplication.classes;
 
 import com.google.firebase.Timestamp;
 import com.google.firebase.firestore.IgnoreExtraProperties;
-import com.google.firebase.firestore.ServerTimestamp;
 
 @IgnoreExtraProperties
 public class ModelPosts {

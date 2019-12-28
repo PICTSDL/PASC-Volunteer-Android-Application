@@ -37,9 +37,6 @@ public class DashboardActivity extends AppCompatActivity {
         navigationView.setOnNavigationItemSelectedListener(selectedListener);
         navigationView.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_LABELED);
 
-
-
-
         //defalut
         actionBar.setTitle("Home");
         HomeFragment fragment1 = new HomeFragment();

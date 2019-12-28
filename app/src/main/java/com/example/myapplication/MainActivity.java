@@ -89,14 +89,14 @@ public class MainActivity extends AppCompatActivity {
 
                 //create user entry in firebase
 
-                firebaseAuth.createUserWithEmailAndPassword(userEmail.getText().toString().trim(), pwd).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                firebaseAuth.createUserWithEmailAndPassword(getIntent().getStringExtra(EmailVerificationActivity.EXTRA_TEXT), pwd).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
                                 progressDialog.dismiss();
                                 if (task.isSuccessful()) {
                                     Toast.makeText(MainActivity.this, "Registration successful...", Toast.LENGTH_SHORT).show();
-                                    firebaseAuth.signInWithEmailAndPassword(userEmail.getText().toString().trim(),pwd).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
+                                    firebaseAuth.signInWithEmailAndPassword(getIntent().getStringExtra(EmailVerificationActivity.EXTRA_TEXT),pwd).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
                                         @Override
                                         public void onComplete(@NonNull Task<AuthResult> task) {
 
